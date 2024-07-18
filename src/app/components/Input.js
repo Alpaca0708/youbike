@@ -5,16 +5,18 @@ const Input = () => {
 
     <div className="flex flex-col p-3">
       <h3 className="text-[#B5CC22] text-semibold">站點資訊</h3>
-      <input placeholder="搜尋站點" className="h-[40px] bg-[#F6F6F6] rounded-[8px] my-2 p-3" />
-      <select className="h-[40px] bg-[#F6F6F6] rounded-[8px] my-2 p-2"
-        placeholder="area">
-        {cities.map((city, index) => (
-          <option className="w-full"
-            key={index}
-            value={city}>
-            {city}</option>
-        ))}
-      </select>
+      <div className="flex flex-col md:flex-row-reverse md:justify-end">
+        <input placeholder="搜尋站點" className="min-w-[227px] h-[40px] bg-[#F6F6F6] rounded-[8px] my-2 p-3 " />
+        <select className="min-w-[175px] h-[40px] bg-[#F6F6F6] rounded-[8px] my-2 p-2 md:mr-2"
+          placeholder="area">
+          {cities.map((city, index) => (
+            <option className="w-full"
+              key={index}
+              value={city}>
+              {city}</option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 }
