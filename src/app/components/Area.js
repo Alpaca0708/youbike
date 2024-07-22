@@ -1,7 +1,35 @@
+'use client'
 import Image from "next/image";
 import Bike from '@/app/assets/bike.png';
+import { useState, useEffect } from 'react';
 
-const Area = ({ area }) => {
+const Area = ({ area, checkedAreas, handleCheckboxChange, handleSelectAll }) => {
+  // const [checkedAreas, setCheckedAreas] = useState({});
+
+  // useEffect(() => {
+  //   const initialCheckedState = {};
+  //   area.forEach(district => {
+  //     initialCheckedState[district] = true; // 預設為選中
+  //   });
+  //   setCheckedAreas(initialCheckedState);
+  // }, [area]);
+
+  // const handleCheckboxChange = (district) => {
+  //   setCheckedAreas(prevState => ({
+  //     ...prevState,
+  //     [district]: !prevState[district]
+  //   }));
+  // };
+
+  // const handleSelectAll = () => {
+  //   const allChecked = Object.values(checkedAreas).every(value => value);
+  //   const newCheckedState = {};
+  //   area.forEach(district => {
+  //     newCheckedState[district] = !allChecked;
+  //   });
+  //   setCheckedAreas(newCheckedState);
+  // };
+
   return (
     <div className="flex flex-col  justify-start" >
       {/* <div>
@@ -13,13 +41,21 @@ const Area = ({ area }) => {
       <div className="flex w-full items-end ">
         <div className="w-full md:w-[40%] flex flex-col ">
           <label>
-            <input type="checkbox" id='all' className=" accent-[#B5CC22] text-white w-[60px]" />
+            <input className=" accent-[#B5CC22] text-white w-[60px]"
+              type="checkbox"
+              id='all'
+              checked={Object.values(checkedAreas).every(value => value)}
+              onChange={handleSelectAll} />
             <span>全部勾選</span>
           </label>
           <div className="flex flex-wrap">
             {area.map && area.map((district, index) =>
               <label key={index}>
-                <input type="checkbox" id={district} className="accent-[#B5CC22] w-[60px] my-3" />
+                <input className="accent-[#B5CC22] w-[60px] my-3"
+                  type="checkbox"
+                  id={district}
+                  checked={checkedAreas[district] || false}
+                  onChange={() => handleCheckboxChange(district)} />
                 <span>{district}</span>
               </label>
             )}

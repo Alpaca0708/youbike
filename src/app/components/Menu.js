@@ -30,29 +30,17 @@ const Menu = () => {
   };
 
   return (
-    <nav className=" border-[1px] border-gra flex md:flex-row flex-col h-100vh overflow-hidden">
+    <nav className=" flex md:flex-row flex-col h-100vh overflow-hidden">
       <div className="container mx-auto flex items-center justify-between px-3">
         <div className="text-white text-2xl">
           <Image src={YoubikeLogo} alt='logo' ></Image>
         </div>
         <button
-          className="text-white block md:hidden focus:outline-none"
+          className="block md:hidden focus:outline-none"
           onClick={toggleMenu}
         >
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-            />
-          </svg>
+          <Image src={MenuIcon} alt='menu' className="h-6 w-6" />
+
         </button>
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'
