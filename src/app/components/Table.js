@@ -42,30 +42,6 @@ const Table = ({ stations }) => {
             </tr>
           ))}
         </tbody>
-        {/* <tbody className="block md:table-row-group">
-          {stations.map((station, index) => (
-            <tr
-              key={index}
-              className="bg-gray-300 border border-grey-500 md:border-none block md:table-row"
-            >
-              <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                {station.city}
-              </td>
-              <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                {station.district}
-              </td>
-              <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                {station.name}
-              </td>
-              <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                {station.availableBikes}
-              </td>
-              <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                {station.availableDocks}
-              </td>
-            </tr>
-          ))}
-        </tbody> */}
       </table>
     </div>
   )

@@ -4,34 +4,9 @@ import Bike from '@/app/assets/bike.png';
 import { useState, useEffect } from 'react';
 
 const Area = ({ area, checkedAreas, handleCheckboxChange, handleSelectAll }) => {
-  // const [checkedAreas, setCheckedAreas] = useState({});
-
-  // useEffect(() => {
-  //   const initialCheckedState = {};
-  //   area.forEach(district => {
-  //     initialCheckedState[district] = true; // 預設為選中
-  //   });
-  //   setCheckedAreas(initialCheckedState);
-  // }, [area]);
-
-  // const handleCheckboxChange = (district) => {
-  //   setCheckedAreas(prevState => ({
-  //     ...prevState,
-  //     [district]: !prevState[district]
-  //   }));
-  // };
-
-  // const handleSelectAll = () => {
-  //   const allChecked = Object.values(checkedAreas).every(value => value);
-  //   const newCheckedState = {};
-  //   area.forEach(district => {
-  //     newCheckedState[district] = !allChecked;
-  //   });
-  //   setCheckedAreas(newCheckedState);
-  // };
 
   return (
-    <div className="flex flex-col  justify-start" >
+    <div className="flex flex-col justify-start" >
       {/* <div>
         <label>
           <input type="checkbox" id='all' className=" accent-[#B5CC22] text-white w-[60px]" />

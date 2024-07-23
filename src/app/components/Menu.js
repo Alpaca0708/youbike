@@ -7,21 +7,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const Menu = () => {
-  // <header className='w-full flex justify-between items-center px-5'>
-  //   <div>
-  //     <Image src={YoubikeLogo} alt='logo' ></Image>
-  //   </div>
-  //   <div>
-  //     <Image src={MenuIcon} alt='menu' ></Image>
-  //   </div>
-  //   {/* <Link href="/">使用說明</Link>
-  //   <Link href="/">收費方式</Link>
-  //   <Link href="/">站點資訊</Link>
-  //   <Link href="/">最新消息</Link>
-  //   <Link href="/">活動專區</Link>
-  //   <button className='bg-black text-white'>登入</button> */}
-  // </header>
-
   const [isOpen, setIsOpen] = useState(false);
   const [isWeb, setIsWeb] = useState(false);
 

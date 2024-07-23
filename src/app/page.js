@@ -22,13 +22,13 @@ export default function Home() {
       const uniqueAreas = new Set(data.map(station => station.sarea));
       const uniqueAreasArray = Array.from(uniqueAreas);
 
-      // 將 Set 轉換為陣列
+
       setArea(uniqueAreasArray);
       console.log('uniqueAreas', uniqueAreas);
       console.log('uniqueAreasArray', uniqueAreasArray);
       const initialCheckedState = {};
       uniqueAreasArray.forEach(district => {
-        initialCheckedState[district] = true; // 預設為選中
+        initialCheckedState[district] = true;
       });
       setCheckedAreas(initialCheckedState);
     } catch (error) {
